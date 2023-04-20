@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Aleksandra Morozova ITW proj2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"> 
+</head>
+<script>
+    var h_hght = 0;
+    var h_mrg = 0;
+    $(function(){
+        $(window).scroll(function(){
+        var top = $(this).scrollTop();
+        var elem = $('#navbar');
+        if (top+h_mrg < h_hght) {
+            elem.css('top', (h_hght-top));
+        } else {
+        elem.css('top', h_mrg);
+        }
+        });
+    });
+</script>
+<body>
+    <header id="header">
+        <div id="header-menu">
+            <div class="logo">
+                <a href="https://youtu.be/X5O12KJ70i0">Kitty Cafe</a>
+                <a href="https://youtu.be/X5O12KJ70i0">Kitty Cafe</a>
+            </div>
+            <div class="contacts">
+                <span class="phone"><i class="fas fa-phone-square-alt"></i>+420 777 416 694</span>
+                <span class="instagram"><i class="fab fa-instagram"></i><a href="https://instagram.com/sashovnya?igshid=YmMyMTA2M2Y=">kittycafe</a></span>
+            </div>
+            <div class="networks">
+                <span class="twitter"><a href="https://www.instagram.com/reel/Cqf8jdijaex/?igshid=YmMyMTA2M2Y="><i class="fab fa-twitter"></i></a></span>
+                <span class="instagram"><a href="https://www.instagram.com/reel/CpgxouiuPo_/?igshid=YmMyMTA2M2Y="><i class="fab fa-instagram"></i></a></span>
+                <span class="facebook"><a href="https://www.instagram.com/p/CqL1Lj4MxtM/?igshid=YmMyMTA2M2Y="><i class="fab fa-facebook"></i></a></span>
+                <span class="youtube"><a href="https://youtu.be/Gnm3hIcjiCQ"><i class="fab fa-youtube"></i></a></span>
+            </div>
+            <nav>
+                <ul id="navbar">
+                    <li><a href="#toys">Toys</a></li>
+                    <li><a href="#menu">Menu</a>
+                        <ul>
+                            <li><a href="#food">Food</a></li>
+                            <li><a href="#drink">Drink</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="about">
+            <div class="imgchng">
+                <div class="chng">
+                    <img src="img/about.jpg">
+                </div>
+                <div class="chng">
+                    <img src="img/about2.GIF">
+                </div>
+            </div>
+            <div class="heading">
+                <span>About us</span>
+            </div>
+            <p>Kitty Cafe is a lovely place that offers you wonderful food and drinks. In our cafe you can sit comfortably and relax in the campaign friends or just relax from the day routine by drinking a cup of cocoa and eating something delicious. Also you can buy cute kitty toys from us, all the money from their sale goes to shelters for cute cats who are looking for a home. We look forward to your visit!</p>
+        </section>
+        <section id="menu">
+            <div id="food">
+            <div class="heading2">
+            <h2>Food</h2>
+            </div>
+            <div class="section-content">
+                <div class="section-item">
+                    <h3>Nuddle</h3>
+                    <img src="img/food1.PNG" alt="">
+                    <span>udon, vegetables, meat/tofu, specialty sauce</span>
+                    <p>130 CZK</p>
+                </div>
+                <div class="section-item">
+                    <h3>Stew</h3>
+                    <img src="img/food2.PNG" alt="">
+                    <span>vegetable stew with rice</span>
+                    <p>90 CZK</p>
+                </div>
+                <div class="section-item">
+                    <h3>Burger</h3>
+                    <img src="img/food3.PNG" alt="">
+                    <span>burger cat with beef meat + potato smilies, sauce</span>
+                    <p>250 CZK</p>
+                </div>
+                <div class="section-item">
+                    <h3>Soup</h3>
+                    <img src="img/food4.PNG" alt="">
+                    <span>onion soup with cheese cats</span>
+                    <p>60 CZK</p>
+                </div>
+            </div>
+            </div>
+            <div id="drink">
+            <div class="heading2">
+            <h2>Drink</h2>
+            </div>
+            <div class="section-content">
+                <div class="section-item">
+                    <h3>Kitty bubble tea</h3>
+                    <img src="img/drink1.jpg" alt="">
+                    <p>120 CZK</p>
+                </div>
+                <div class="section-item">
+                    <h3>Kitty tea</h3>
+                    <img src="img/drink2.jpg" alt="">
+                    <p>30 CZK</p>
+                </div>
+                <div class="section-item">
+                    <h3>Kitty cocoa</h3>
+                    <img src="img/drink3.jpg" alt="">
+                    <p>60 CZK</p>
+                </div>
+                <div class="section-item">
+                    <h3>Kitty coffee</h3>
+                    <img src="img/drink4.jpg" alt="">
+                    <p>60 CZK</p>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section class="toys">
+            <div id="toys">
+            <div class="heading2">
+            <h2>Toys</h2>
+            </div>
+            <div class="section-content">
+                <div class="section-item">
+                    <h3>Long cat</h3>
+                    <img src="img/toy1.PNG" alt="">
+                    <p>300 CZK</p>
+                </div>
+                <div class="section-item">
+                    <h3>Toxic cat</h3>
+                    <img src="img/toy2.PNG" alt="">
+                    <p>300 CZK</p>
+                </div>
+                <div class="section-item">
+                    <h3>Fairy cat</h3>
+                    <img src="img/toy3.PNG" alt="">
+                    <p>300 CZK</p>
+                </div>
+                <div class="section-item">
+                    <h3>Big cat</h3>
+                    <img src="img/toy4.PNG" alt="">
+                    <p>300 CZK</p>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div id="div">
+            <section id="summary">
+                <h2 data-end="e">Kitty Caf</h2>
+                <img src="img/sum.PNG" alt="">
+                <p>You can book a table by calling the phone number indicated in our contacts or just come to our cafe. We are open from Monday to Friday from 9:00 to 23:00 and on weekends from 10:00 to 22:30. We sincerely hope that you will like us and come to us more!</p>
+                <h3>FOLLOW US</h3>
+                <div class="networks">
+                    <span class="twitter"><a href="https://www.instagram.com/reel/CqQXhmfJ627/?igshid=YmMyMTA2M2Y="><i class="fab fa-twitter"></i></a></span>
+                    <span class="instagram"><a href="https://www.instagram.com/reel/CqhCeXpj9P2/?igshid=YmMyMTA2M2Y="><i class="fab fa-instagram"></i></a></span>
+                    <span class="facebook"><a href="https://www.instagram.com/reel/ConFFwegtCu/?igshid=YmMyMTA2M2Y="><i class="fab fa-facebook"></i></a></span>
+                    <span class="youtube"><a href="https://youtu.be/YRvOePz2OqQ"><i class="fab fa-youtube"></i></a></span>
+                </div>
+                <div id="license">
+                    <span>© 2023 KITTYCAFE CO., LTD.</span>
+                </div>
+            </section>
+            <section id="contact">
+                <h2>Contact us</h2>
+                <div class="contacts">
+                    <span class="instagram"><i class="fab fa-instagram"></i><a href="https://instagram.com/sashovnya?igshid=YmMyMTA2M2Y=">kittycafe</a></span>
+                    <span class="phone"><i class="fas fa-phone-square-alt"></i>+420 777 416 694</span>
+                    <span class="address"><i class="fas fa-map-marker-alt"></i>Brno</span>
+                </div>
+                <form action="https://instagram.com/sashovnya?igshid=YmMyMTA2M2Y=" method="post" id="subscribe-form" target="_blank" novalidate="">
+                    <div id="newsletter">
+                        <label for="EMAIL"><strong>JOIN OUR NEWSLETTER </strong></label>&nbsp;&nbsp;
+                    </div>
+                    <div>
+                        <input class="form-email" style="min-width:200px; padding: 10px; border: 1px solid #2f1b08; border-radius: 2px;" type="email" value="" id="EMAIL" placeholder="Enter email address" required="">
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                            <input type="text" tabindex="-1" value="">
+                        </div>
+                        <input type="submit" value="Subscribe" id="subscribe">
+                    </div>
+                </form>
+            </section>
+            <section id="links">
+                <h2>Links</h2>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#toys">Toys</a></li>
+                </ul>
+            </section>
+        </div>
+        <div id="friends">
+        <img src="img/stars.PNG" alt="">
+        </div>
+    </footer>
+    <div class="btnup btnup_hide"></div>
+  <script>
+    const btnUp = {
+      el: document.querySelector('.btnup'),
+      show() {
+        this.el.classList.remove('btnup_hide');
+      },
+      hide() {
+        this.el.classList.add('btnup_hide');
+      },
+      addEventListener() {
+        window.addEventListener('scroll', () => {
+          const scrollY = window.scrollY || document.documentElement.scrollTop;
+          scrollY > 400 ? this.show() : this.hide();
+        });
+        document.querySelector('.btnup').onclick = () => {
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+          });
+        }
+      }
+    }
+    btnUp.addEventListener();
+  </script>
+</body>
+</html>

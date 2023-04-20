@@ -1,0 +1,688 @@
+/*
+ * Login: xmoroz03
+ */
+*{
+    box-sizing: border-box;
+}
+html{
+    color: #2f1b08;
+}
+/* SCROLL */
+@media(prefers-reduced-motion: no-preference){
+    :root {
+        scroll-behavior: smooth;
+    }
+}
+body{
+    font-family: "Poppins";
+    line-height: 1.7;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    max-width: 1960px;
+}
+.toys, #header-menu{
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 960px;
+    margin: -90px auto 0;
+    padding: 100px 0 0;
+}
+img{
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+}
+.heading2{
+    font-size: 24px; 
+    font-family: "Bebas Neue";
+    letter-spacing: 3px;
+    transition-duration: 1s;
+    width: 900px;
+    margin-left: 25px;
+
+}
+.toys .heading2{
+    text-align: center;
+}
+#food .heading2, #drink .heading2{
+    text-align: left;
+    border-bottom: #2f1b08 solid 3px;
+}
+main h2{
+    margin-bottom: -10px;
+}
+#header{
+    content: "";
+    background-color: rgb(255, 255, 255);
+    background-image: url("../img/rain\ pain.GIF");
+    background-repeat: repeat;
+    position: relative;
+    z-index: 2;
+    background-size: auto 100%;
+    min-height: 400px;
+}
+#header .fa-twitter, #header .fa-facebook, #header .fa-instagram, #header .fa-youtube{
+    transition-duration: 0.5s;
+    padding-left: 7px;
+}
+#header .networks, #header .contacts{
+    position: relative;
+    top: 100px;
+}
+#header .networks :hover{
+    color: rgb(61, 81, 161);
+}
+#header .networks{
+    font-size: 24px;
+}
+#header .contacts .instagram{
+    transition-duration: 0.5s;
+}
+#header .contacts .instagram:hover{
+    color: rgb(67, 89, 174);
+}
+/* NAVIGACE */
+#header nav li{
+    position: relative;
+    display: block;
+}
+#navbar ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+    list-style: none;
+    margin: 0;
+    max-width: 960px;
+    padding-left: 0;
+}
+#navbar li:hover ul{ 
+    display: block; 
+}
+#navbar, #navbar ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#navbar{
+    height: max-content;
+    width: 100%;
+    top: 0px;
+    position: fixed;
+    z-index: 999;
+    max-width: 960px;
+    background-color: #ffffffd5;
+}
+#navbar li{
+    float: right;
+    height: 100%;
+}
+#navbar li a{
+    display: block;
+    padding: 6px;
+    width: 100px;
+    color: #2f1b08;
+    font-weight: bolder;
+    text-decoration: none;
+    text-align: center;
+}
+#navbar li:hover a{ 
+    color: rgb(46, 61, 123);
+}
+.contacts a, .networks a{
+    color: #2f1b08;
+}
+/* LOGO */
+.logo a{
+    font-size: 5rem;
+    font-family: "Bebas Neue";
+    font-weight: bolder;
+    text-shadow: 0 0 10px rgb(255, 255, 255), 0 0 10px rgb(255, 255, 255);
+    position: absolute;
+}
+.logo a:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 0.1px #2f1b08;
+}
+.logo a:nth-child(2) {
+    color: #2f1b08;
+    animation: animate 4s ease-in-out infinite;
+}
+@keyframes animate {
+    0%, 100% {
+      clip-path: polygon(
+        0% 45%,
+        16% 44%,
+        33% 50%,
+        54% 60%,
+        70% 61%,
+        84% 59%,
+        100% 52%,
+        100% 100%,
+        0% 100%
+      );
+    }
+  
+    50% {
+      clip-path: polygon(
+        0% 60%,
+        15% 65%,
+        34% 66%,
+        51% 62%,
+        67% 50%,
+        84% 45%,
+        100% 46%,
+        100% 100%,
+        0% 100%
+      );
+    }
+}
+#about{
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 960px;
+    margin: 50px auto 0;
+    height: 350px;
+}
+#about:hover p, #about:hover .heading{
+    background-color: #e6e9fd;
+}
+#about p, #about .heading{
+    background-color: #f0f2fa;
+    border-radius: 7px;
+    padding-left: 10px;
+    max-width: 800px;
+    transition: 0.5s;
+}
+#about p{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    word-spacing: 5px;
+    box-shadow: 0 0 5px 5px rgb(185, 185, 187);
+}
+#about .heading{
+    margin-bottom: -55px;
+    margin-top: 60px;
+    font-family: "Bebas Neue";
+    font-size: 24px;
+}
+
+/* ZMENA OBRAZKU */
+.imgchng img{
+    float: right;
+    margin-bottom: 20px;
+    max-height: 265px;
+    border-radius: 150px 150px 150px 150px;
+    -webkit-border-radius: 150px 150px 150px 150px;
+    -moz-border-radius: 150px 150px 150px 150px;
+    box-shadow: 0 0 5px 5px rgb(97, 97, 97);
+}
+.imgchng .chng img{
+    height: 100%;
+    object-fit: cover;
+}
+.imgchng .chng:nth-of-type(2){
+    display: none;
+}
+.imgchng:hover .chng:nth-of-type(1){
+    display: none;
+}
+.imgchng:hover .chng:nth-of-type(2){
+    display: block;
+}
+.imgchng:hover{
+    cursor: pointer;
+}
+
+.section-content{
+    display: flex;
+    justify-content: center;
+}
+main h3{
+    text-align: center;
+}
+main{
+    content: "";
+    background-image: url("../img/main.jpg");
+    padding-bottom: 10px;
+    padding-top: 10px;
+    box-shadow: inset 0 0 5px 5px white;
+}
+main #menu{
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 960px;
+    margin: -10px auto 0;
+    padding: 20px 0 0;
+    border: #2f1b08 solid 2px;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+.section-item p{
+    opacity: 0;
+    transition: 0.5s;
+    color: #3b240e;
+    font-weight: bolder;
+    margin-top: -30px;
+    display: flex;
+    justify-content: center;
+}
+#toys .section-item p, #drink .section-item p{
+    margin-top: 35px;
+}
+.section-item span{
+    opacity: 1;
+    transition: 0.3s;
+    color: #2f1b08;
+    font-weight: bolder;
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    
+}
+.section-item:hover p{
+    opacity: 1;
+}
+.section-item:hover span{
+    opacity: 0;
+}
+#food{
+    margin-bottom: -30px;
+}
+#food .section-item{
+    float: none;
+    position: relative;
+    width: 100%;
+    margin: 1.7%;
+}
+#food .section-item:hover img{ 
+    opacity: 1;
+    transform: scale(1.1);
+}
+#food .section-item img{
+    width: 300px;
+    height: 200px;
+    opacity: 0.8;
+    transition-duration: 1s, 0.5s;
+    transition-property: opacity, transform;
+}
+#food:hover .heading2{
+    opacity: 0.8;
+}
+#drink .section-item{
+    float: none;
+    position: relative;
+    width: 100%;
+    margin: 1.7%;
+}
+#drink{
+    padding-bottom: 30px;
+}
+#drink .section-item:hover img{ 
+    opacity: 1;
+    transform: scale(1.1);
+}
+#drink .section-item img{
+    width: 300px;
+    height: 250px;
+    opacity: 0.8;
+    transition-duration: 1s, 0.5s;
+    transition-property: opacity, transform;
+}
+#drink:hover .heading2{
+    opacity: 0.8;
+}
+.toys{
+    margin-bottom: 30px;
+    margin-top: -110px;
+}
+#toys .section-item{
+    float: none;
+    position: relative;
+    width: 100%;
+    margin: 1.7%;
+}
+#toys .section-item:hover img{ 
+    opacity: 1;
+    transform: scale(1.1);
+}
+#toys .section-item img{
+    width: 300px;
+    height: 200px;
+    opacity: 0.8;
+    transition-duration: 1s, 0.5s;
+    transition-property: opacity, transform;
+}
+#toys:hover .heading2{
+    opacity: 0.8;
+}
+footer{
+    background-color: #ffffffdb; 
+}
+footer #div{
+    display: flex;
+    max-width: 100vw;
+    position: relative;
+    z-index: 1;
+    width: 960px;
+    margin: 0px auto 0;
+    padding: 10px 0 0;
+}
+#summary{
+   max-width: 400px;
+}
+#summary img{
+    position: absolute;
+    z-index: -1;
+    max-width: 67px;
+    left: 87px;
+    top: 32px;
+    opacity: 0.8;
+}
+#summary h2{
+    font-size: 32px;
+    font-family: "Bebas Neue";
+    position: relative;
+}
+#summary h2::after {
+    content: attr(data-end);
+    color: #2f1b08;
+}
+footer:hover #summary h2::first-letter{
+    color: rgb(46, 61, 123);
+}
+#summary h3{
+    font-size: 16px;
+}
+#summary .fa-twitter, #summary .fa-facebook, #summary .fa-instagram, #summary .fa-youtube{
+    background-color: #2f1b08;
+    padding: 10px;
+    border: 1px solid #2f1b08;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    color: white;
+    transition-duration: 0.3s;
+}
+#summary .networks :hover{
+    background-color: #e3e2e1e2;
+    color: #2f1b08;
+  }
+.contacts span i{
+    padding-right: 5px;
+}
+#contact{
+    margin-left: 90px;
+}
+#contact .contacts{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+#contact .contacts span{
+    padding-bottom: 5px;
+}
+#contact form input[type="email"]{
+    border-radius: 1px;
+    border: 1px solid white;
+    padding: 10px 10px;
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    margin-right: -4px;
+}
+   
+#contact form input[type="submit"]{
+    border-radius: 2px;
+    background-color: #2f1b08;
+    color: white;
+    padding: 10px;
+    border: 1px solid #2f1b08;
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+}
+footer .contacts .instagram{
+    transition-duration: 0.5s;
+}
+footer .contacts .instagram:hover{
+    opacity: 0.8;
+    color: blue;
+}
+form{
+    padding-top: 80px;
+}
+form #newsletter{
+    padding-bottom: 20px;
+}
+#links, #contact{
+    position: relative;
+    top: 25px;
+}
+#links{
+    margin-right: 0px;
+}
+#links h2, #contact h2{
+    display: block;
+    position: relative;
+    bottom: 12px;
+    font-family: "Bebas Neue";
+    letter-spacing: 5px;
+}
+#links h2{
+    padding-left: 80px;
+}
+#links ul{
+    padding-bottom: 13px;
+}
+#links li{
+    list-style: none;
+    padding-left: 42px;
+    transition-duration: 0.5s;
+}
+#links li::before{
+    content: "★";
+    padding-right: 5px;
+}
+#links li:hover{
+    opacity: 0.8;
+    color: blue;
+}
+#links a{
+    color: #2f1b08;
+}
+#license{
+    font-size: 12px;
+}
+#friends img{
+    display: block;
+    position: relative;
+    z-index: 0;
+    max-width: 960px;
+    height: 250px;
+    margin: 40px auto 0;
+}
+#contact form  input[type="submit"]:hover{
+    background-color: rgb(69, 80, 177);
+}
+
+/* BUTTON */
+.btnup {
+    position: fixed;
+    background-color: #696969;
+    right: 15px;
+    bottom: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    transition-duration: 0.5s;
+}
+.btnup::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-size: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/%3E%3C/svg%3E");
+}
+.btnup_hide {
+    display: none;
+}
+@media (hover: hover) and (pointer: fine) {
+    .btnup:hover {
+      background-color: #2f1b08;
+    }
+}
+
+@media screen and (min-width: 576px){
+    main #menu, .toys, #header-menu{
+        max-width: 560px;
+    }
+    #about{
+        max-width: 560px;
+        margin-bottom: 30px;
+    }
+    #about p{
+        padding-bottom: 20px;
+        padding-right: 5px;
+    }
+    #about img{
+        height: 200px;
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .section-content{
+        display: flex;
+        flex-direction: column;
+        margin: 0 10px 0;
+        align-items: center;
+    }
+    .section-item img{
+        height: 250px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+    }
+    .heading2{
+        max-width: 520px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    #summary{
+        margin-left: 10px;
+    }
+    #summary img{
+        position: absolute;
+        left: 97px;
+    }
+    #links{
+        margin-right: 10px;
+    }
+    #friends img{
+        max-width: 550px;
+        height: 200px;
+    }
+}
+@media screen and (min-width: 768px){
+    .logo, #header .networks{
+        margin-left: 10px;
+    }
+    #header .contacts{
+        margin-left: 15px;
+    }
+    #summary{
+        margin-left: 10px;
+    }
+    #summary img{
+        position: absolute;
+        left: 97px;
+    }
+    #links{
+        margin-right: 10px;
+    }
+    main #menu, .toys, #header-menu{
+        max-width: 740px;
+    }
+    #about{
+        max-width: 740px;
+    }
+    #about p{
+        padding-bottom: 20px;
+    }
+    #about img{
+       margin-top: 25px;
+       margin-right: 10px;
+       margin-left: 10px;
+       height: 270px;
+    }
+    .heading2{
+        max-width: 700px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    #friends img{
+        max-width: 765px;
+        height: 250px;
+    }
+}
+@media screen and (min-width: 992px){
+    body{
+        margin: 0 auto;
+        padding: 5px;
+    }
+    .section-content{
+        display: flex;
+        flex-flow: nowrap;
+    }
+    #summary{
+        margin-left: 20px;
+    }
+    #summary img{
+        position: absolute;
+        left: 107px;
+    }
+    main #menu, .toys, #header-menu{
+        max-width: 992px;
+    }
+    #about{
+        max-width: 992px;
+    }
+    #about p{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    #about img{
+        margin-top: 2px;
+    }
+    #about p, #about .heading{
+        background-color: #f0f2fa;
+        border-radius: 7px;
+        padding-left: 10px;
+        max-width: 800px;
+        transition: 0.5s;
+    }
+    .heading2{
+        max-width: 960px;
+        margin-left: 27px;
+    }
+    #friends img{
+        max-width: 960px;
+        height: 300px;
+    }
+}
+@media screen and (min-width: 1200px){
+    .body{
+        margin: 0 auto;
+        max-width: 1200px;
+        padding: 5px;
+    }
+}
